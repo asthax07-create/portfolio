@@ -10,8 +10,10 @@
     />
     <title>Astha | Software Engineer</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="chatbot.css"> 
   </head>
-
+  <script src="config.js"></script> 
+  
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
 
@@ -91,8 +93,52 @@
       <p>
         &copy; <span id="year"></span> Astha. All rights reserved.
       </p>
+      <section id="weather">
+        <h2>Weather</h2>
+    
+        <input
+            type="text"
+            id="cityInput"
+            placeholder="Enter a city"
+        >
+    
+        <button id="weatherButton">
+            Get Weather
+        </button>
+    
+        <div id="weatherResult">
+            Enter a city to see the weather.
+        </div>
+    </section> 
+    <section id="portfolio-chatbot" class="chatbot-section">
+      <h2>Ask My Portfolio Chatbot</h2>
+  
+      <p>Ask a question and get a response from the AI.</p>
+  
+      <div id="chatMessages" class="chat-messages" aria-live="polite">
+          <p class="bot-message">
+              Hello! Ask me something about this portfolio.
+          </p>
+      </div>
+  
+      <form id="chatForm" class="chat-form">
+          <input
+              id="chatInput"
+              type="text"
+              placeholder="Type your question"
+              required
+          >
+  
+          <button id="chatSend" type="submit">
+              Send
+          </button>
+      </form>
+  
+      <p id="chatStatus" aria-live="polite"></p>
+  </section>
     </footer>
     <button id="themeToggle">Switch to Dark Mode</button>
     <script src="script.js"></script>
+    <script src="chatbot.js"></script> 
   </body>
 </html>
