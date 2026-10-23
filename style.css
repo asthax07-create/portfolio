@@ -279,4 +279,18 @@ h2 {
   }
 }
 
+.project-search {
+  margin: 20px 0;
+}
+
+.project-search input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+
 

@@ -71,3 +71,4 @@ Known details that were **not** placeholder-tagged: name **Astha** and role **so
 ## Verdict
 
 The page meets the stated HTML/CSS/JS structure, keeps styling external, marks unknown copy with `PLACEHOLDER`, and includes a small accessible enhancement in JavaScript (theme + year).
+

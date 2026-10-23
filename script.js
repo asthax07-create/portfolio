@@ -80,3 +80,24 @@ async function getWeather() {
 }
 weatherButton.addEventListener("click", getWeather);
 
+const projectSearch = document.getElementById("projectSearch");
+const projectCards = document.querySelectorAll(".project-card");
+
+projectSearch.addEventListener("input", function () {
+    const searchTerm = projectSearch.value.toLowerCase();
+
+    projectCards.forEach(function (card) {
+        const projectText = card.textContent.toLowerCase();
+        const technologies = card.dataset.tech.toLowerCase();
+
+        if (
+            projectText.includes(searchTerm) ||
+            technologies.includes(searchTerm)
+        ) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+
