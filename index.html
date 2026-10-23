@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,52 +7,62 @@
       name="description"
       content="Aastha, a second-year BTech CSE student at JECRC University, passionate about software engineering and web development."
     />
-    <title>Aastha | Software Enigneer</title>
+    <title>Aastha | Software Engineer</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="chatbot.css"> 
+    <link rel="stylesheet" href="chatbot.css" />
+    <script src="config.js"></script>
   </head>
-  <script src="config.js"></script> 
-  
+
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
       <div class="header-inner">
-        
+        <button
+          type="button"
+          id="menu-toggle"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          Menu
+        </button>
 
-        <nav aria-label="Primary navigation">
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
           <ul class="nav-list">
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
+            <li><a href="#about">About me</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#weather">Weather</a></li>
+            <li><a href="#portfolio-chatbot">AI chatbot</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#portfolio-chatbot">AI Chatbot</a></li>
-        </ul>
+          </ul>
         </nav>
 
-        <button type="button" id="theme-toggle" aria-pressed="false">
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">
           Dark mode
         </button>
       </div>
     </header>
 
     <main id="main">
-      <section id="home"></section>
-      <img
-    src="images/profile.jpg..jpeg"
-    alt="Astha's Profile Photo"
-    class="profile-photo"
->
-      <h1>Aastha Sharma </h1>
-      <p class="tagline">
-        BTech CSE Student | Aspiring Software Engineer
-      </p>
-    </section>
+      <section id="home" class="hero">
+        <img
+          src="images/profile.jpg"
+          alt="Aastha's profile photo"
+          class="profile-photo"
+          width="180"
+          height="180"
+        />
+        <div class="hero-text">
+          <h1>Aastha Sharma</h1>
+          <p class="tagline">BTech CSE Student | Aspiring Software Engineer</p>
+        </div>
+      </section>
 
-    <section id="about">
-      <section id="about" aria-labelledby="about-heading">
-        <h2 id="about-heading">About Me</h2>
+      <section id="about" class="section" aria-labelledby="about-heading">
+        <h2 id="about-heading">About me</h2>
 
         <p>
           Hello, I'm Aastha, a second-year BTech student in Computer Science
@@ -66,19 +75,17 @@
         <p>
           Jaipur, Rajasthan<br />
           BTech in Computer Science and Engineering<br />
-          Focus: C++, Data Structures and Algorithms, Web Development,
-          and Software Engineering
+          Focus: C++, Data Structures and Algorithms, Web Development, and
+          Software Engineering
         </p>
-      </section>
-
 
         <p>
           Contact:
           <a href="mailto:asthax07@gmail.com">asthax07@gmail.com</a>
         </p>
       </section>
-      <section id="skills">
-      <section id="skills" aria-labelledby="skills-heading">
+
+      <section id="skills" class="section" aria-labelledby="skills-heading">
         <h2 id="skills-heading">Skills</h2>
 
         <ul class="skills-list">
@@ -88,191 +95,165 @@
           <li>Soft Skills: Communication, Teamwork, Problem-Solving</li>
         </ul>
       </section>
-      <section id="projects">
-      <section id="projects" class="card">
-        <h2>My Projects</h2>
+
+      <section id="projects" class="section" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">My projects</h2>
+
         <div class="project-search">
           <input
-              type="text"
-              id="projectSearch"
-              placeholder="Search projects by name or technology..."
-              aria-label="Search projects"
-          >
-      </div>
-    
-        <div class="projects-container">
-    
-            <!-- Project 1 -->
-            
-<div class="project-card" data-tech="python">
-  <h3>Python Programs Collection</h3>
-
-  <p>
-      A collection of Python programs including Factorial,
-      Fibonacci, and Structure-to-Dictionary conversion.
-  </p>
-
-  <p>
-      <strong>Technologies:</strong> Python, Git, GitHub
-  </p>
-
-  <a href="https://github.com/asthax07-create/python_basics_25bcon2383_factorial" target="_blank">
-      Factorial
-  </a>
-
-  <a href="https://github.com/asthax07-create/python_basics_25bcon2383_fibonacci" target="_blank">
-      Fibonacci
-  </a>
-
-  <a href="https://github.com/asthax07-create/python_basics_25bcon2383_struct-to-dict" target="_blank">
-      Structure-to-Dictionary
-  </a>
-</div>
-    
-            <!-- Project 2 -->
-            <div class="project-card" data-tech="python cursor ai">
-                <h3>Messy Python Code Improvement</h3>
-                <p>
-                    Improved and organized a messy Python program using
-                    AI assistance for better readability and structure.
-                </p>
-                <p><strong>Technologies:</strong> Python, Cursor AI</p>
-    
-                <a href="https://github.com/asthax07-create/messy-python-code-.git" target="_blank">
-                    GitHub Repository
-                </a>
-            </div>
-    
-            <!-- Project 3 -->
-            <div class="project-card" data-tech="python cursor ai debugging">
-                <h3>Bug Fixing Using Cursor AI</h3>
-                <p>
-                    Identified and corrected errors in a buggy program
-                    with the help of Cursor AI.
-                </p>
-                <p><strong>Technologies:</strong> Python, Cursor AI, GitHub</p>
-    
-                <a href="https://github.com/asthax07-create/python_basics_25bcon2383_lecture8.git" target="_blank">
-                    GitHub Repository
-                </a>
-            </div>
-    
-            <!-- Project 4 -->
-            <div class="project-card" data-tech="html css javascript quiz">
-                <h3>Interactive Quiz Application</h3>
-                <p>
-                    An interactive quiz application that allows users
-                    to answer questions and view their results.
-                </p>
-                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-    
-                <a href="https://github.com/asthax07-create/quiz.git" target="_blank">
-                    GitHub Repository
-                </a>
-    
-                <a href="file:///C:/Users/aryan/OneDrive/Desktop/aastha/quiz/index.html" target="_blank">
-                    Live Demo
-                </a>
-            </div>
-    
-            <!-- Project 5 -->
-            <div class="project-card" data-tech="html css javascript book">
-                <h3>Book Reading List Application</h3>
-                <p>
-                    A book reading list application for adding books,
-                    managing reading status, filtering books, deleting
-                    entries, and viewing summary counts.
-                </p>
-                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-    
-                <a href="https://github.com/asthax07-create/reading-list-app" target="_blank">
-                    GitHub Repository
-                </a>
-    
-                <a href="https://reading-list-app-sable.vercel.app/" target="_blank">
-                    Live Demo
-                </a>
-            </div>
-    
+            type="search"
+            id="projectSearch"
+            placeholder="Search projects by name or technology..."
+            aria-label="Search projects"
+          />
         </div>
-    </section>
-    <footer class="site-footer">
-      <p>
-        &copy; <span id="year"></span> Astha. All rights reserved.
-      </p>
-      <section id="weather">
-        <h2>Weather</h2>
-    
-        <input
+
+        <div class="projects-container">
+          <!-- Project 1 -->
+          <div class="project-card" data-tech="python">
+            <h3>Python Programs Collection</h3>
+            <p>
+              A collection of Python programs including Factorial, Fibonacci,
+              and Structure-to-Dictionary conversion.
+            </p>
+            <p><strong>Technologies:</strong> Python, Git, GitHub</p>
+
+            <div class="card-links">
+              <a href="https://github.com/asthax07-create/python_basics_25bcon2383_factorial" target="_blank" rel="noopener">Factorial</a>
+              <a href="https://github.com/asthax07-create/python_basics_25bcon2383_fibonacci" target="_blank" rel="noopener">Fibonacci</a>
+              <a href="https://github.com/asthax07-create/python_basics_25bcon2383_struct-to-dict" target="_blank" rel="noopener">Structure-to-Dictionary</a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card" data-tech="python cursor ai">
+            <h3>Messy Python Code Improvement</h3>
+            <p>
+              Improved and organized a messy Python program using AI
+              assistance for better readability and structure.
+            </p>
+            <p><strong>Technologies:</strong> Python, Cursor AI</p>
+
+            <div class="card-links">
+              <a href="https://github.com/asthax07-create/messy-python-code-.git" target="_blank" rel="noopener">GitHub repository</a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card" data-tech="python cursor ai debugging">
+            <h3>Bug Fixing Using Cursor AI</h3>
+            <p>
+              Identified and corrected errors in a buggy program with the help
+              of Cursor AI.
+            </p>
+            <p><strong>Technologies:</strong> Python, Cursor AI, GitHub</p>
+
+            <div class="card-links">
+              <a href="https://github.com/asthax07-create/python_basics_25bcon2383_lecture8.git" target="_blank" rel="noopener">GitHub repository</a>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card" data-tech="html css javascript quiz">
+            <h3>Interactive Quiz Application</h3>
+            <p>
+              An interactive quiz application that allows users to answer
+              questions and view their results.
+            </p>
+            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+
+            <div class="card-links">
+              <a href="https://github.com/asthax07-create/quiz.git" target="_blank" rel="noopener">GitHub repository</a>
+              <!-- Add a hosted link here (Vercel / GitHub Pages). A file:/// path only works on your own computer. -->
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card" data-tech="html css javascript book">
+            <h3>Book Reading List Application</h3>
+            <p>
+              A book reading list application for adding books, managing
+              reading status, filtering books, deleting entries, and viewing
+              summary counts.
+            </p>
+            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+
+            <div class="card-links">
+              <a href="https://github.com/asthax07-create/reading-list-app" target="_blank" rel="noopener">GitHub repository</a>
+              <a href="https://reading-list-app-sable.vercel.app/" target="_blank" rel="noopener">Live demo</a>
+            </div>
+          </div>
+        </div>
+
+        <p id="projectEmpty" class="empty-note" hidden>
+          No projects match your search. Try a language or tool name.
+        </p>
+      </section>
+
+      <section id="weather" class="section" aria-labelledby="weather-heading">
+        <h2 id="weather-heading">Weather</h2>
+
+        <div class="weather-form">
+          <input
             type="text"
             id="cityInput"
             placeholder="Enter a city"
-        >
-    
-        <button id="weatherButton">
-            Get Weather
-        </button>
-    
-        <div id="weatherResult">
-            Enter a city to see the weather.
+            aria-label="City name"
+          />
+          <button type="button" id="weatherButton">Get weather</button>
         </div>
-    </section> 
 
-    
+        <div id="weatherResult" aria-live="polite">
+          Enter a city to see the weather.
+        </div>
+      </section>
 
+      <section id="portfolio-chatbot" class="chatbot-section" aria-labelledby="chat-heading">
+        <h2 id="chat-heading">Ask my portfolio chatbot</h2>
 
-      
-    </section>
-    <section id="portfolio-chatbot" class="chatbot-section">
-      <h2>Ask My Portfolio Chatbot</h2>
-  
-      <p>Ask a question and get a response from the AI.</p>
-  
-      <div id="chatMessages" class="chat-messages" aria-live="polite">
-          <p class="bot-message">
-              Hello! Ask me something about this portfolio.
-          </p>
-      </div>
-  
-      <form id="chatForm" class="chat-form">
+        <p>Ask a question and get a response from the AI.</p>
+
+        <div id="chatMessages" class="chat-messages" aria-live="polite">
+          <p class="bot-message">Hello! Ask me something about this portfolio.</p>
+        </div>
+
+        <form id="chatForm" class="chat-form">
           <input
-              id="chatInput"
-              type="text"
-              placeholder="Type your question"
-              required
-          >
-  
-          <button id="chatSend" type="submit">
-              Send
-          </button>
-      </form>
-  
-      <p id="chatStatus" aria-live="polite"></p>
+            id="chatInput"
+            type="text"
+            placeholder="Type your question"
+            aria-label="Your question"
+            required
+          />
+          <button id="chatSend" type="submit">Send</button>
+        </form>
 
-      
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>Whether you have a project idea, an opportunity, or simply want to connect, feel free to reach out. I'm always happy to learn, collaborate, and build something impactful..</p>
+        <p id="chatStatus" aria-live="polite"></p>
+      </section>
 
-    <div class="contact-details">
+      <section id="contact" class="section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact me</h2>
         <p>
+          Whether you have a project idea, an opportunity, or simply want to
+          connect, feel free to reach out. I'm always happy to learn,
+          collaborate, and build something impactful.
+        </p>
+
+        <div class="contact-details">
+          <p>
             <strong>Email:</strong>
-            <a href="mailto:asthax07@gmail.com">
-                asthax07@gmail.com
-            </a>
-        </p>
+            <a href="mailto:asthax07@gmail.com">asthax07@gmail.com</a>
+          </p>
+          <p><strong>Location:</strong> Jaipur, Rajasthan</p>
+        </div>
+      </section>
+    </main>
 
-        <p>
-            <strong>Location:</strong> Jaipur, Rajasthan
-        </p>
-    </div>
-</section>
-
-  </section>
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Aastha Sharma. All rights reserved.</p>
     </footer>
-    <button id="themeToggle">Switch to Dark Mode</button>
+
     <script src="script.js"></script>
-    <script src="chatbot.js"></script> 
+    <script src="chatbot.js"></script>
   </body>
 </html>
-
